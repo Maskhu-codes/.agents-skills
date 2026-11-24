@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Installer script untuk menyalin Agent Skills ke lingkungan lokal atau global.
 

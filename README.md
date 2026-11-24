@@ -1,6 +1,6 @@
 # 🤖 AI Agent & Skills Ultimate Kit
 
-Koleksi lengkap aset **AI Agent, Custom Skills, Plugin Swarm, dan Tooling Desain Frontend** yang dirancang oleh **[Maskhu-codes](https://github.com/Maskhu-codes)**. Repositori ini berfungsi sebagai perpustakaan terpusat agar seluruh project di masa mendatang dapat langsung memiliki agen AI berkemampuan tinggi dengan mudah.
+Koleksi lengkap aset **AI Agent, Custom Skills, Plugin Swarm, dan Tooling Desain & Arsitektur Sistem** yang dirancang oleh **[Maskhu-codes](https://github.com/Maskhu-codes)**. Repositori ini berfungsi sebagai perpustakaan terpusat agar seluruh project di masa mendatang dapat langsung memiliki agen AI berkemampuan tinggi dengan mudah.
 
 ---
 
@@ -25,6 +25,9 @@ D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
 ├── install.sh                     # Installer otomatis untuk Linux / macOS
 │
 ├── skills/                        # ⭐ Kumpulan Skill Siap Pakai
+│   ├── [📋 Product Management & System Architecture (PRD)]
+│   │   └── prd-generator/         # Generator PRD & arsitektur sistem (wawancara A/B/C/D, Gherkin, Mermaid)
+│   │
 │   ├── [🎨 Anti-Slop & Desain UI Premium]
 │   │   ├── impeccable/            # Framework anti-slop (60+ aturan, /polish, /bolder, /quieter)
 │   │   ├── tactile-design/        # Desain fisik & taktil (hairline 0.5px, tombol pegas, sumur input)
@@ -57,6 +60,7 @@ D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
 │       └── caveman/               # Mode komunikasi super singkat & hemat token
 │
 ├── agents/                        # 👥 Persona Subagent Otonom
+│   ├── product-architect.md       # Lead Product Manager & System Architect (PRD & System Modeling)
 │   ├── researcher.md              # Agen riset codebase & dokumentasi web (read-only)
 │   ├── senior-developer.md        # Agen pengembang pragmatis (clean code & minimal diff)
 │   ├── browser-automation.md      # Agen otomatisasi peramban Chrome DevTools & live test UI
@@ -76,7 +80,14 @@ D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
 
 ## 🎯 Cheat Sheet: Kapan Menggunakan Setiap Skill?
 
-### 1. Kategori Desain & Anti-Slop (UI Cantik & Tidak Terlihat Buatan AI)
+### 1. Kategori Perencanaan & PRD Sistem (Spec-Driven Architecture)
+| Nama Skill | Kapan Digunakan? | Perintah / Trigger |
+| :--- | :--- | :--- |
+| **`prd-generator`** | Saat ingin merancang sistem baru, merumuskan ide produk, atau membuat dokumen PRD lengkap berstandar Silicon Valley sebelum mulai koding. | `"buat prd"`, `"create a prd"`, `"spesifikasi sistem"`, `"rancang sistem ini"`, `"plan feature"` |
+
+---
+
+### 2. Kategori Desain & Anti-Slop (UI Cantik & Tidak Terlihat Buatan AI)
 | Nama Skill | Kapan Digunakan? | Perintah / Trigger |
 | :--- | :--- | :--- |
 | **`impeccable`** | Saat ingin menyempurnakan estetika UI secara menyeluruh, audit anti-slop, atau membuat desain lebih berani/tenang. | `/impeccable polish`<br>`/impeccable bolder`<br>`/impeccable quieter`<br>`/impeccable audit` |
@@ -87,7 +98,7 @@ D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
 
 ---
 
-### 2. Kategori Rekayasa Frontend Spesifik (16 Modul Jakub Krehel)
+### 3. Kategori Rekayasa Frontend Spesifik (16 Modul Jakub Krehel)
 | Modul Skill | Spesialisasi Teknis | Contoh Penggunaan |
 | :--- | :--- | :--- |
 | **`better-typography`** | Tipografi, OpenType, variable font, spasi huruf, dan font pairing harmonis. | "Perbaiki tipografi halaman ini agar terbaca jelas." |
@@ -104,7 +115,7 @@ D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
 
 ---
 
-### 3. Kategori Senior Developer & Code Review (Cepat & Bersih)
+### 4. Kategori Senior Developer & Code Review (Cepat & Bersih)
 | Nama Skill | Kapan Digunakan? | Perintah / Trigger |
 | :--- | :--- | :--- |
 | **`ponytail`** | Saat ingin perubahan kode sesedikit mungkin, efisien, tanpa kode berlebih (prinsip YAGNI). | `ponytail`<br>`be lazy`<br>`simplest solution` |
