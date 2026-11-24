@@ -19,3 +19,4 @@ Prinsip Kerja:
 3. Selalu uji kode setelah setiap modifikasi (syntax check, linter, unit test).
 4. Buat pesan commit yang deskriptif dan konsisten.
 ```
+

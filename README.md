@@ -1,6 +1,18 @@
-# 🤖 AI Agent & Skills Repository
+# 🤖 AI Agent & Skills Ultimate Kit
 
-Repositori ini adalah bundel lengkap aset **AI Agent & Skills** untuk AI Assistant (Google Antigravity, Gemini Code Assist, Claude Code, Cursor, Copilot, dll.) yang dirancang oleh **[Maskhu-codes](https://github.com/Maskhu-codes)** agar dapat digunakan kembali dengan mudah di berbagai project di masa mendatang.
+Koleksi lengkap aset **AI Agent, Custom Skills, Plugin Swarm, dan Tooling Desain Frontend** yang dirancang oleh **[Maskhu-codes](https://github.com/Maskhu-codes)**. Repositori ini berfungsi sebagai perpustakaan terpusat agar seluruh project di masa mendatang dapat langsung memiliki agen AI berkemampuan tinggi dengan mudah.
+
+---
+
+## ⚡ Panduan Cepat Pakai (Quickstart)
+
+Hanya perlu **1 langkah** untuk memasang seluruh skill ke project baru Anda:
+
+```powershell
+# Buka terminal di project baru Anda, lalu jalankan:
+D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
+```
+*Atau jalankan `D:\agents-skills\install.ps1 -Target Global` agar aktif otomatis di semua project pada laptop Anda.*
 
 ---
 
@@ -8,101 +20,123 @@ Repositori ini adalah bundel lengkap aset **AI Agent & Skills** untuk AI Assista
 
 ```text
 .agents-skills/
-├── README.md                  # Dokumentasi utama repositori
-├── install.ps1                # Script installer otomatis untuk Windows PowerShell
-├── install.sh                 # Script installer otomatis untuk Linux / macOS
+├── README.md                      # Dokumentasi lengkap & panduan (file ini)
+├── install.ps1                    # Installer otomatis untuk Windows PowerShell
+├── install.sh                     # Installer otomatis untuk Linux / macOS
 │
-├── agents/                    # 👥 Definisi Persona & Subagent Otonom
-│   ├── README.md              # Panduan arsitektur subagent
-│   ├── researcher.md          # Agen riset codebase & dokumentasi web
-│   ├── senior-developer.md    # Agen pengembang senior pragmatis (YAGNI)
-│   ├── browser-automation.md  # Agen otomasi Chrome DevTools
-│   └── qa-auditor.md          # Agen verifikasi kualitas, audit & testing
+├── skills/                        # ⭐ Kumpulan Skill Siap Pakai
+│   ├── [🎨 Anti-Slop & Desain UI Premium]
+│   │   ├── impeccable/            # Framework anti-slop (60+ aturan, /polish, /bolder, /quieter)
+│   │   ├── tactile-design/        # Desain fisik & taktil (hairline 0.5px, tombol pegas, sumur input)
+│   │   ├── anti-slop-design/      # Mencegah tampilan generik ungu-biru AI
+│   │   ├── design-taste-frontend/ # Selera desain tingkat tinggi untuk landing page & app
+│   │   └── micro-interactions/    # Arsitek animasi mikro, gesture feedback, spring physics
+│   │
+│   ├── [🛠️ Rekayasa Frontend Presisi - Jakub Krehel]
+│   │   ├── better-typography/     # Tipografi, font pairing, variable font, OpenType
+│   │   ├── better-colors/         # Format warna modern, kontras WCAG, semantic token
+│   │   ├── better-motion/         # Fisika animasi gerak, transisi enter/exit, performa frame
+│   │   ├── better-accessibility/  # Standar WCAG, navigasi keyboard, screen reader, ARIA
+│   │   ├── better-layout/         # Sistem grid, alignment, layout responsif & ritme spasial
+│   │   ├── better-ui/             # Kedalaman permukaan (surfaces) & konsistensi ikon
+│   │   ├── better-writing/        # UX copywriting, microcopy, pesan error & empty state
+│   │   ├── break/                 # Stress test komponen UI (teks panjang, layar sempit, data null)
+│   │   ├── build-design/          # Jembatan desain Figma ke kode produksi
+│   │   ├── explain-interface/     # Rekonstruksi & analisis efek visual dari screenshot
+│   │   ├── interface-review/      # Audit konsistensi token & sinyal visual
+│   │   ├── state-machine/         # Manajemen status transisi UI yang kompleks
+│   │   ├── variant/               # Pola pemilihan varian komponen UI
+│   │   ├── better-interface/      # Format review UI & resolusi hierarki visual
+│   │   ├── afk/                   # Otomasi tugas saat developer sedang tidak di depan layar
+│   │   └── upskill/               # Riset & sintesis referensi teknis baru
+│   │
+│   └── [💼 Produktivitas Senior Developer]
+│       ├── ponytail/              # Solusi teringkas, elegan, dan paling efisien (prinsip YAGNI)
+│       ├── ponytail-audit/        # Audit menyeluruh kualitas codebase (bug, beban, celah keamanan)
+│       ├── ponytail-review/       # Code review mendalam per commit atau Pull Request
+│       └── caveman/               # Mode komunikasi super singkat & hemat token
 │
-├── skills/                    # ⭐ Kumpulan Custom Agent Skills Utama
-│   ├── anti-slop-design/      # Frontend design berstandar tinggi tanpa estetika generik AI
-│   ├── caveman/               # Mode komunikasi super ringkas, to the point, hemat token
-│   ├── design-taste-frontend/ # Desain frontend berkarakter untuk landing page & app
-│   ├── micro-interactions/    # Arsitek mikro-interaksi, transisi, animasi & motion design
-│   ├── ponytail/              # Lazy senior dev: solusi teringkas & paling efisien
-│   ├── ponytail-audit/        # Audit kualitas codebase menyeluruh (bug, load, security)
-│   └── ponytail-review/       # Code review mendalam per commit / pull request
+├── agents/                        # 👥 Persona Subagent Otonom
+│   ├── researcher.md              # Agen riset codebase & dokumentasi web (read-only)
+│   ├── senior-developer.md        # Agen pengembang pragmatis (clean code & minimal diff)
+│   ├── browser-automation.md      # Agen otomatisasi peramban Chrome DevTools & live test UI
+│   └── qa-auditor.md              # Agen verifikasi kualitas, audit error & testing
 │
-├── plugins/                   # 🔌 Plugin & Orkestrasi Multi-Agent
-│   └── swarm/                 # Plugin swarm orchestration & message board
+├── plugins/                       # 🔌 Plugin Multi-Agent
+│   └── swarm/                     # Orkestrasi multi-agent swarm & message board
 │
-├── mcp/                       # 🌐 Integrasi Model Context Protocol (MCP)
-│   └── mcp_config.json        # Konfigurasi server MCP (Figma Dev Mode, dll)
+├── mcp/                           # 🌐 Model Context Protocol (MCP)
+│   └── mcp_config.json            # Konfigurasi server MCP (Figma Dev Mode, dll.)
 │
-└── builtin-skills/            # 🛠️ Built-in Skills Resmi Antigravity / Gemini
-    ├── agy-customizations/    # Panduan sistem kustomisasi
-    ├── antigravity_guide/     # Panduan komprehensif Antigravity
-    ├── automation/            # Background automation terjadwal
-    ├── conversations/         # Pengelolaan percakapan agent
-    ├── generative_ui/         # Render widget UI interaktif & visual
-    ├── mcp-app-development/   # Pembuatan aplikasi MCP
-    ├── migrate-agent-settings/# Migrasi pengaturan dari agen AI lain
-    ├── migrate-workflows/     # Migrasi workflow warisan ke skill modern
-    ├── native_swarm/          # Orkestrasi swarm agent multi-peran
-    ├── permissioned-github/   # Integrasi GitHub aman & terautentikasi
-    ├── plugin/                # Manajemen dan pembuatan paket plugin
-    ├── run-workflow/          # Orkestrasi skrip alur kerja dinamis Python
-    ├── swarm_monitor/         # Pemantau kesehatan proses swarm
-    ├── swarm_narrator/        # Narator pelaporan swarm
-    ├── swarm_pane/            # Tampilan visual ringkasan swarm
-    └── ui-plugin-navigation/  # Navigasi panel antarmuka plugin
+└── builtin-skills/                # 📚 16 Built-in Reference Skills Antigravity
+    └── ... (agy-customizations, automation, generative_ui, mcp-app, run-workflow, dll.)
 ```
 
 ---
 
-## 🚀 3 Cara Memakai di Project Baru
+## 🎯 Cheat Sheet: Kapan Menggunakan Setiap Skill?
 
-### Cara 1: Menggunakan Script Installer Otomatis (Paling Mudah)
+### 1. Kategori Desain & Anti-Slop (UI Cantik & Tidak Terlihat Buatan AI)
+| Nama Skill | Kapan Digunakan? | Perintah / Trigger |
+| :--- | :--- | :--- |
+| **`impeccable`** | Saat ingin menyempurnakan estetika UI secara menyeluruh, audit anti-slop, atau membuat desain lebih berani/tenang. | `/impeccable polish`<br>`/impeccable bolder`<br>`/impeccable quieter`<br>`/impeccable audit` |
+| **`tactile-design`** | Saat membuat komponen interaktif (tombol, form input, kartu) agar terasa fisik, berbobot nyata, dan punya garis tepi mikro 0.5px. | `tactile design`<br>`physical ui`<br>`layered surfaces` |
+| **`anti-slop-design`** | Menghindari tampilan klise AI (gradien ungu-biru murahan, card di dalam card, font Inter sembarangan). | `anti-slop`<br>`design ui`<br>`landing page` |
+| **`design-taste-frontend`** | Mengembangkan landing page, portfolio, atau dashboard dengan selera estetika tingkat tinggi. | `frontend design`<br>`redesign`<br>`dashboard ui` |
+| **`micro-interactions`** | Menambahkan sentuhan animasi mikro, gesture feedback, loading skeleton, dan transisi halus. | `micro-interaction`<br>`animation`<br>`transition` |
 
-#### Pengguna Windows (PowerShell):
+---
+
+### 2. Kategori Rekayasa Frontend Spesifik (16 Modul Jakub Krehel)
+| Modul Skill | Spesialisasi Teknis | Contoh Penggunaan |
+| :--- | :--- | :--- |
+| **`better-typography`** | Tipografi, OpenType, variable font, spasi huruf, dan font pairing harmonis. | "Perbaiki tipografi halaman ini agar terbaca jelas." |
+| **`better-colors`** | Warna modern (OKLCH), rasio kontras WCAG, dan palet warna semantik. | "Buat palet warna netral yang lolos uji kontras WCAG AAA." |
+| **`better-motion`** | Fisika pegas, transisi enter/exit, dan animasi berkinerja 60fps tanpa jeda. | "Tambahkan animasi buka-tutup modal yang halus." |
+| **`better-accessibility`** | Aksesibilitas web (A11y), navigasi keyboard, screen reader, dan hit area sentuh. | "Audit aksesibilitas form login dan tombol navigasi." |
+| **`better-layout`** | Sistem grid, adaptasi responsif, alignment, dan ritme spasial. | "Rapikan layout form agar simetris di mobile & desktop." |
+| **`better-ui`** | Kedalaman visual, tumpukan permukaan (*surfaces*), dan ikonografi seragam. | "Perbaiki hierarki visual kartu daftar produk." |
+| **`better-writing`** | UX writing, microcopy tombol, pesan error ramah, dan status kosong (*empty state*). | "Tuliskan microcopy yang jelas untuk dialog konfirmasi." |
+| **`break`** | Pengujian stres (*stress test*) komponen terhadap teks kepanjangan atau layar sempit. | "Uji komponen kartu ini: apa yang rusak jika nama pengguna 100 karakter?" |
+| **`build-design`** | Menjembatani desain Figma ke dalam kode produksi yang rapi. | "Konversi frame Figma ini menjadi kode frontend." |
+| **`explain-interface`** | Menganalisis dan membongkar teknik desain dari gambar/screenshot. | "Bagaimana cara membuat efek glassmorphism seperti di screenshot ini?" |
+| **`state-machine`** | Merancang status komponen yang rumit (loading, error, success, empty, idle). | "Petakan state machine untuk alur upload multi-file." |
+
+---
+
+### 3. Kategori Senior Developer & Code Review (Cepat & Bersih)
+| Nama Skill | Kapan Digunakan? | Perintah / Trigger |
+| :--- | :--- | :--- |
+| **`ponytail`** | Saat ingin perubahan kode sesedikit mungkin, efisien, tanpa kode berlebih (prinsip YAGNI). | `ponytail`<br>`be lazy`<br>`simplest solution` |
+| **`ponytail-audit`** | Audit kesehatan seluruh repository (mencari bug, kebocoran memori, dead code, dan bloat). | `/ponytail-audit`<br>`audit codebase`<br>`review repo` |
+| **`ponytail-review`** | Review mendalam sebelum commit atau submit Pull Request. | `/ponytail-review`<br>`code review`<br>`review PR` |
+| **`caveman`** | Mode bicara super ringkas tanpa basa-basi untuk menghemat token dan langsung ke inti kode. | `/caveman`<br>`talk like caveman`<br>`be brief` |
+
+---
+
+## 🛠️ 3 Cara Pemasangan di Project Lain
+
+### Cara 1: Menggunakan Script Installer Otomatis
 ```powershell
-# 1. Pasang ke project lokal saat ini
-D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
+# 1. Pasang langsung ke folder project Anda (Rekomendasi per project):
+D:\agents-skills\install.ps1 -Target Local -Destination "D:\Path\Ke\Project-Baru\skills"
 
-# 2. Atau pasang ke global user config (aktif otomatis di semua project)
+# 2. Atau pasang ke direktori global (Otomatis aktif di semua workspace):
 D:\agents-skills\install.ps1 -Target Global
 ```
 
-#### Pengguna Linux / macOS (Bash):
-```bash
-chmod +x ./install.sh
-./install.sh local /path/to/project/skills
-```
-
----
-
-### Cara 2: Menghubungkan sebagai Git Submodule (Rekomendasi Proyek Tim)
+### Cara 2: Sebagai Git Submodule (Paling Rapi untuk Tim)
 ```bash
 cd "D:\Path\Ke\Project-Baru"
 git submodule add https://github.com/Maskhu-codes/.agents-skills.git .agents-skills
 ```
+*Jika repositori ini diperbarui di kemudian hari, jalankan `git submodule update --remote` untuk mendapatkan skill terbaru.*
+
+### Cara 3: Salin Folder Secara Manual
+Salin folder skill yang Anda butuhkan dari `D:\agents-skills\skills\` ke folder `skills/` di project baru Anda.
 
 ---
 
-### Cara 3: Salin Folder Manual
-Salin folder yang dibutuhkan (`skills/`, `agents/`, atau `mcp/`) langsung ke direktori project Anda.
-
----
-
-## 📖 Ringkasan Custom Skills
-
-| Nama Skill | Deskripsi & Kegunaan | Trigger Kata Kunci |
-| :--- | :--- | :--- |
-| **`anti-slop-design`** | Menghindari tampilan frontend generik AI. Menghasilkan desain profesional khas. | `anti-slop`, `design ui`, `landing page`, `dashboard` |
-| **`caveman`** | Mode komunikasi super singkat & padat tanpa basa-basi teknis, sangat hemat token. | `/caveman`, `caveman mode`, `be brief`, `less tokens` |
-| **`design-taste-frontend`** | Standar selera desain tingkat lanjut untuk antarmuka web/mobile, sistem desain nyata. | `frontend design`, `redesign`, `portfolio` |
-| **`micro-interactions`** | Arsitek mikro-interaksi, transisi halus, motion token, animasi layout, feedback haptik/visual. | `micro-interaction`, `animation`, `transition`, `motion` |
-| **`ponytail`** | Mode lazy senior engineer: menerapkan solusi paling sederhana, elegan, dan minim baris kode (YAGNI). | `ponytail`, `be lazy`, `simplest solution`, `yagni` |
-| **`ponytail-audit`** | Audit menyeluruh arsitektur repository: mendeteksi bug, beban kapasitas, keamanan, dan bloat. | `/ponytail-audit`, `audit codebase`, `review repo` |
-| **`ponytail-review`** | Code review mendalam: memeriksa logika, keamanan, kecepatan eksekusi, dan kebersihan baris kode. | `/ponytail-review`, `code review`, `review PR` |
-
----
-
-## 🛠️ Lisensi & Kontributor
+## 👨‍💻 Kontributor & Lisensi
 - **Owner:** [Maskhu-codes](https://github.com/Maskhu-codes)
-- **Repo URL:** [https://github.com/Maskhu-codes/.agents-skills.git](https://github.com/Maskhu-codes/.agents-skills.git)
+- **Kompatibilitas:** Antigravity IDE, Google Gemini CLI, Claude Code, Cursor, Copilot Workspace, OpenCode.

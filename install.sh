@@ -28,11 +28,20 @@ mkdir -p "$DESTINATION"
 for skill in "$SOURCE_SKILLS"/*; do
     if [ -d "$skill" ]; then
         skill_name="$(basename "$skill")"
-        cp -r "$skill" "$DESTINATION/"
-        echo "[✓] Terinstal: $skill_name"
+        if [ "$skill_name" = "jakubkrehel" ]; then
+            for sub in "$skill"/*; do
+                if [ -d "$sub" ]; then
+                    sub_name="$(basename "$sub")"
+                    cp -r "$sub" "$DESTINATION/"
+                    echo "[✓] Terinstal: $sub_name"
+                fi
+            done
+        else
+            cp -r "$skill" "$DESTINATION/"
+            echo "[✓] Terinstal: $skill_name"
+        fi
     fi
 done
 
 echo "------------------------------------------"
 echo "[SELESAI] Semua skill berhasil disalin ke $DESTINATION"
-

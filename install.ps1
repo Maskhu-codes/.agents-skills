@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Installer script untuk menyalin Agent Skills ke lingkungan lokal atau global.
 
@@ -60,12 +60,22 @@ if (-not (Test-Path $Destination)) {
     Write-Host "[+] Folder tujuan berhasil dibuat: $Destination" -ForegroundColor Green
 }
 
-# Salin Custom Skills
+# Salin Custom & Engineering Skills
 $customSkills = Get-ChildItem -Path $sourceSkills -Directory
 foreach ($skill in $customSkills) {
-    $targetSkillPath = Join-Path $Destination $skill.Name
-    Copy-Item -Path $skill.FullName -Destination $targetSkillPath -Recurse -Force
-    Write-Host "[✓] Terinstal: $($skill.Name)" -ForegroundColor Green
+    if ($skill.Name -eq "jakubkrehel") {
+        # Unpack sub-skills agar langsung terdeteksi oleh agent
+        $subSkills = Get-ChildItem -Path $skill.FullName -Directory
+        foreach ($sub in $subSkills) {
+            $targetSub = Join-Path $Destination $sub.Name
+            Copy-Item -Path $sub.FullName -Destination $targetSub -Recurse -Force
+            Write-Host "[✓] Terinstal: $($sub.Name)" -ForegroundColor Green
+        }
+    } else {
+        $targetSkillPath = Join-Path $Destination $skill.Name
+        Copy-Item -Path $skill.FullName -Destination $targetSkillPath -Recurse -Force
+        Write-Host "[✓] Terinstal: $($skill.Name)" -ForegroundColor Green
+    }
 }
 
 # Salin Builtin Skills jika diminta
@@ -81,4 +91,3 @@ if ($IncludeBuiltin -and (Test-Path $sourceBuiltin)) {
 Write-Host "------------------------------------------"
 Write-Host "[SELESAI] Semua skill berhasil disalin ke $Destination!" -ForegroundColor Cyan
 Write-Host "Agent AI Anda sekarang siap menggunakan skill tersebut." -ForegroundColor Cyan
-

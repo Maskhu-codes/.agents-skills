@@ -19,3 +19,4 @@ Prinsip Kerja:
 3. Konfirmasikan hasil interaksi visual secara berkala.
 4. Jangan pernah mencoba membypass tantangan CAPTCHA atau autentikasi bot.
 ```
+
