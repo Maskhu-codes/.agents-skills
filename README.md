@@ -1,33 +1,46 @@
-# 🤖 AI Agent Skills Repository
+# 🤖 AI Agent & Skills Repository
 
-Repositori ini menyimpan kumpulan **Agent Skills** untuk AI Assistant (Google Antigravity, Gemini Code Assist, Claude Code, Cursor, dll.) agar dapat digunakan kembali dengan mudah di berbagai project di masa mendatang.
+Repositori ini adalah bundel lengkap aset **AI Agent & Skills** untuk AI Assistant (Google Antigravity, Gemini Code Assist, Claude Code, Cursor, Copilot, dll.) yang dirancang oleh **[Maskhu-codes](https://github.com/Maskhu-codes)** agar dapat digunakan kembali dengan mudah di berbagai project di masa mendatang.
 
 ---
 
-## 📂 Struktur Direktori
+## 📂 Struktur Repositori
 
 ```text
 .agents-skills/
-├── README.md              # Dokumentasi & panduan penggunaan
-├── install.ps1            # Script installer otomatis untuk Windows PowerShell
-├── install.sh             # Script installer otomatis untuk Linux / macOS
+├── README.md                  # Dokumentasi utama repositori
+├── install.ps1                # Script installer otomatis untuk Windows PowerShell
+├── install.sh                 # Script installer otomatis untuk Linux / macOS
 │
-├── skills/                # ⭐ Kumpulan Custom Agent Skills Utama
+├── agents/                    # 👥 Definisi Persona & Subagent Otonom
+│   ├── README.md              # Panduan arsitektur subagent
+│   ├── researcher.md          # Agen riset codebase & dokumentasi web
+│   ├── senior-developer.md    # Agen pengembang senior pragmatis (YAGNI)
+│   ├── browser-automation.md  # Agen otomasi Chrome DevTools
+│   └── qa-auditor.md          # Agen verifikasi kualitas, audit & testing
+│
+├── skills/                    # ⭐ Kumpulan Custom Agent Skills Utama
 │   ├── anti-slop-design/      # Frontend design berstandar tinggi tanpa estetika generik AI
 │   ├── caveman/               # Mode komunikasi super ringkas, to the point, hemat token
 │   ├── design-taste-frontend/ # Desain frontend berkarakter untuk landing page & app
 │   ├── micro-interactions/    # Arsitek mikro-interaksi, transisi, animasi & motion design
-│   ├── ponytail/              # Lazy senior dev: solusi teringkas & paling efisien (YAGNI)
+│   ├── ponytail/              # Lazy senior dev: solusi teringkas & paling efisien
 │   ├── ponytail-audit/        # Audit kualitas codebase menyeluruh (bug, load, security)
 │   └── ponytail-review/       # Code review mendalam per commit / pull request
 │
-└── builtin-skills/        # 🛠️ Built-in Skills Resmi Antigravity / Gemini
-    ├── agy-customizations/    # Panduan & referensi sistem kustomisasi Antigravity
-    ├── antigravity_guide/     # Panduan komprehensif ekosistem Antigravity
-    ├── automation/            # Perancang background automation terjadwal
+├── plugins/                   # 🔌 Plugin & Orkestrasi Multi-Agent
+│   └── swarm/                 # Plugin swarm orchestration & message board
+│
+├── mcp/                       # 🌐 Integrasi Model Context Protocol (MCP)
+│   └── mcp_config.json        # Konfigurasi server MCP (Figma Dev Mode, dll)
+│
+└── builtin-skills/            # 🛠️ Built-in Skills Resmi Antigravity / Gemini
+    ├── agy-customizations/    # Panduan sistem kustomisasi
+    ├── antigravity_guide/     # Panduan komprehensif Antigravity
+    ├── automation/            # Background automation terjadwal
     ├── conversations/         # Pengelolaan percakapan agent
-    ├── generative_ui/         # Render widget UI interaktif & diagram visual
-    ├── mcp-app-development/   # Pembuatan aplikasi MCP (Model Context Protocol)
+    ├── generative_ui/         # Render widget UI interaktif & visual
+    ├── mcp-app-development/   # Pembuatan aplikasi MCP
     ├── migrate-agent-settings/# Migrasi pengaturan dari agen AI lain
     ├── migrate-workflows/     # Migrasi workflow warisan ke skill modern
     ├── native_swarm/          # Orkestrasi swarm agent multi-peran
@@ -42,75 +55,54 @@ Repositori ini menyimpan kumpulan **Agent Skills** untuk AI Assistant (Google An
 
 ---
 
-## 🚀 3 Cara Menggunakan Skill di Project Baru
+## 🚀 3 Cara Memakai di Project Baru
 
-Pilih salah satu cara berikut saat memulai project baru:
+### Cara 1: Menggunakan Script Installer Otomatis (Paling Mudah)
 
-### Cara 1: Menggunakan Script Installer Otomatis (Direkomendasikan)
+#### Pengguna Windows (PowerShell):
+```powershell
+# 1. Pasang ke project lokal saat ini
+D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
 
-#### Untuk Pengguna Windows (PowerShell):
-1. **Instal ke Global Config** (Otomatis aktif di semua project pada laptop ini):
-   ```powershell
-   cd D:\agents-skills
-   .\install.ps1 -Target Global
-   ```
-2. **Instal ke Folder Project Tertentu**:
-   ```powershell
-   cd D:\agents-skills
-   .\install.ps1 -Target Local -Destination "D:\Path\Ke\Project-Baru-Anda\skills"
-   ```
+# 2. Atau pasang ke global user config (aktif otomatis di semua project)
+D:\agents-skills\install.ps1 -Target Global
+```
 
-#### Untuk Pengguna Linux / macOS (Bash):
+#### Pengguna Linux / macOS (Bash):
 ```bash
-cd /path/to/.agents-skills
-chmod +x install.sh
-./install.sh global
-# atau untuk project lokal:
-./install.sh local /path/to/new-project/skills
+chmod +x ./install.sh
+./install.sh local /path/to/project/skills
 ```
 
 ---
 
-### Cara 2: Sebagai Git Submodule (Paling Rapi untuk Multi-Repo)
-
-Jika Anda ingin project baru Anda selalu terhubung dengan repositori skill ini:
-
+### Cara 2: Menghubungkan sebagai Git Submodule (Rekomendasi Proyek Tim)
 ```bash
-cd "D:\Path\Ke\Project-Baru-Anda"
-
-# Tambahkan sebagai submodule ke folder .agents-skills atau skills
+cd "D:\Path\Ke\Project-Baru"
 git submodule add https://github.com/Maskhu-codes/.agents-skills.git .agents-skills
 ```
 
-Jika ada pembaruan skill di kemudian hari, cukup jalankan:
-```bash
-git submodule update --remote
-```
+---
+
+### Cara 3: Salin Folder Manual
+Salin folder yang dibutuhkan (`skills/`, `agents/`, atau `mcp/`) langsung ke direktori project Anda.
 
 ---
 
-### Cara 3: Salin Manual (Copy-Paste)
-
-Anda cukup menyalin folder skill yang diinginkan dari direktori `skills/` ke dalam:
-- Folder project lokal: `<project-root>/skills/` atau `<project-root>/.gemini/config/skills/`
-- Folder global user: `C:\Users\<Username>\.gemini\config\skills\`
-
----
-
-## 📖 Katalog Custom Agent Skills
+## 📖 Ringkasan Custom Skills
 
 | Nama Skill | Deskripsi & Kegunaan | Trigger Kata Kunci |
 | :--- | :--- | :--- |
-| **`anti-slop-design`** | Menghindari tampilan frontend generik AI (purple-gradient, rounded-corner, font generic). Menghasilkan desain profesional dan khas. | `anti-slop`, `design ui`, `landing page`, `dashboard` |
-| **`caveman`** | Mode komunikasi super singkat & padat tanpa basa-basi, langsung fakta teknis & solusi, sangat menghemat token. | `/caveman`, `caveman mode`, `be brief`, `less tokens` |
-| **`design-taste-frontend`** | Standar selera desain tingkat lanjut untuk antarmuka web/mobile, sistem desain nyata, dan pra-pemeriksaan estetika. | `frontend design`, `redesign`, `portfolio` |
-| **`micro-interactions`** | Arsitek mikro-interaksi, transisi halus, motion token, animasi layout, feedback haptik/visual, spring physics. | `micro-interaction`, `animation`, `transition`, `motion` |
-| **`ponytail`** | Mode lazy senior engineer: menerapkan solusi paling sederhana, elegan, dan minim perubahan kode (YAGNI principle). | `ponytail`, `be lazy`, `simplest solution`, `yagni` |
-| **`ponytail-audit`** | Audit menyeluruh kualitas arsitektur repository: mendeteksi bug, beban kapasitas, keamanan, dead code, dan bloat. | `/ponytail-audit`, `audit codebase`, `review repo` |
-| **`ponytail-review`** | Code review mendalam per perubahan: memeriksa logika, keamanan, kecepatan eksekusi, dan kebersihan baris kode. | `/ponytail-review`, `code review`, `review PR` |
+| **`anti-slop-design`** | Menghindari tampilan frontend generik AI. Menghasilkan desain profesional khas. | `anti-slop`, `design ui`, `landing page`, `dashboard` |
+| **`caveman`** | Mode komunikasi super singkat & padat tanpa basa-basi teknis, sangat hemat token. | `/caveman`, `caveman mode`, `be brief`, `less tokens` |
+| **`design-taste-frontend`** | Standar selera desain tingkat lanjut untuk antarmuka web/mobile, sistem desain nyata. | `frontend design`, `redesign`, `portfolio` |
+| **`micro-interactions`** | Arsitek mikro-interaksi, transisi halus, motion token, animasi layout, feedback haptik/visual. | `micro-interaction`, `animation`, `transition`, `motion` |
+| **`ponytail`** | Mode lazy senior engineer: menerapkan solusi paling sederhana, elegan, dan minim baris kode (YAGNI). | `ponytail`, `be lazy`, `simplest solution`, `yagni` |
+| **`ponytail-audit`** | Audit menyeluruh arsitektur repository: mendeteksi bug, beban kapasitas, keamanan, dan bloat. | `/ponytail-audit`, `audit codebase`, `review repo` |
+| **`ponytail-review`** | Code review mendalam: memeriksa logika, keamanan, kecepatan eksekusi, dan kebersihan baris kode. | `/ponytail-review`, `code review`, `review PR` |
 
 ---
 
 ## 🛠️ Lisensi & Kontributor
 - **Owner:** [Maskhu-codes](https://github.com/Maskhu-codes)
-- **Kompatibilitas:** Antigravity IDE, Google Gemini CLI, Claude Code, Cursor, Copilot Workspace.
+- **Repo URL:** [https://github.com/Maskhu-codes/.agents-skills.git](https://github.com/Maskhu-codes/.agents-skills.git)

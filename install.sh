@@ -35,3 +35,4 @@ done
 
 echo "------------------------------------------"
 echo "[SELESAI] Semua skill berhasil disalin ke $DESTINATION"
+

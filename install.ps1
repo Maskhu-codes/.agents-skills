@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Installer script untuk menyalin Agent Skills ke lingkungan lokal atau global.
 
@@ -81,3 +81,4 @@ if ($IncludeBuiltin -and (Test-Path $sourceBuiltin)) {
 Write-Host "------------------------------------------"
 Write-Host "[SELESAI] Semua skill berhasil disalin ke $Destination!" -ForegroundColor Cyan
 Write-Host "Agent AI Anda sekarang siap menggunakan skill tersebut." -ForegroundColor Cyan
+
