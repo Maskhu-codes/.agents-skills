@@ -28,6 +28,12 @@ D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
 │   ├── [📋 Product Management & System Architecture (PRD)]
 │   │   └── prd-generator/         # Generator PRD & arsitektur sistem (wawancara A/B/C/D, Gherkin, Mermaid)
 │   │
+│   ├── [🛡️ Keamanan & AppSec (OWASP Standard)]
+│   │   └── security-auditor/      # Audit keamanan kode, scan secret/API key, OWASP MASVS & API Top 10
+│   │
+│   ├── [🧪 Test Engineering & TDD Harness]
+│   │   └── test-harness/          # Automated test harness, TDD (Red-Green-Refactor), mocktail & edge cases
+│   │
 │   ├── [🎨 Anti-Slop & Desain UI Premium]
 │   │   ├── impeccable/            # Framework anti-slop (60+ aturan, /polish, /bolder, /quieter)
 │   │   ├── tactile-design/        # Desain fisik & taktil (hairline 0.5px, tombol pegas, sumur input)
@@ -61,6 +67,8 @@ D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
 │
 ├── agents/                        # 👥 Persona Subagent Otonom
 │   ├── product-architect.md       # Lead Product Manager & System Architect (PRD & System Modeling)
+│   ├── security-engineer.md       # Lead AppSec Engineer (OWASP MASVS & Vulnerability Hunter)
+│   ├── test-engineer.md           # Senior QA Automation & Test Harness Architect (TDD & Mocktail)
 │   ├── researcher.md              # Agen riset codebase & dokumentasi web (read-only)
 │   ├── senior-developer.md        # Agen pengembang pragmatis (clean code & minimal diff)
 │   ├── browser-automation.md      # Agen otomatisasi peramban Chrome DevTools & live test UI
@@ -122,6 +130,14 @@ D:\agents-skills\install.ps1 -Target Local -Destination ".\skills"
 | **`ponytail-audit`** | Audit kesehatan seluruh repository (mencari bug, kebocoran memori, dead code, dan bloat). | `/ponytail-audit`<br>`audit codebase`<br>`review repo` |
 | **`ponytail-review`** | Review mendalam sebelum commit atau submit Pull Request. | `/ponytail-review`<br>`code review`<br>`review PR` |
 | **`caveman`** | Mode bicara super ringkas tanpa basa-basi untuk menghemat token dan langsung ke inti kode. | `/caveman`<br>`talk like caveman`<br>`be brief` |
+
+---
+
+### 5. Kategori Keamanan & Pengujian Otomatis (Security & Test Harness)
+| Nama Skill | Kapan Digunakan? | Perintah / Trigger |
+| :--- | :--- | :--- |
+| **`security-auditor`** | Sebelum rilis atau merge PR: mendeteksi kebocoran API key/secret, audit penyimpanan lokal aman (Keychain/Keystore), proteksi BOLA/IDOR, dan kepatuhan OWASP MASVS. | `"audit keamanan"`, `"security check"`, `"owasp audit"`, `"scan secret"`, `"cek celah keamanan"` |
+| **`test-harness`** | Saat membuat service/fitur baru: membangun test otomatis terisolasi, mocking network/database dengan mocktail, uji skenario timeout/error 500, dan alur TDD. | `"buat unit test"`, `"test harness"`, `"tdd"`, `"mock service"`, `"tulis test untuk ini"` |
 
 ---
 

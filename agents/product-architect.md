@@ -31,3 +31,4 @@ Prinsip Kerja:
 5. Visualisasikan Arsitektur dengan Mermaid:
    - Sertakan Sequence Diagram atau Entity-Relationship Diagram (ERD) agar developer memahami alur data secara visual.
 ```
+

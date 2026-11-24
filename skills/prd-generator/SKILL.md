@@ -106,3 +106,4 @@ Setiap kebutuhan fungsional diberi kode berurut (`FR-01`, `FR-02`) dan dijabarka
 3. **Penyimpanan Dokumen:**
    - Untuk proyek tunggal: simpan sebagai `PRD.md` di root proyek.
    - Untuk fitur bertahap: simpan di `tasks/prd-[nama-fitur].md`.
+

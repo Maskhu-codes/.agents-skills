@@ -9,6 +9,8 @@ Direktori ini mendefinisikan persona, peran, instruksi sistem, dan kapabilitas a
 | Agent | Peran / Job Title | Karakteristik Utama | Tools Utama |
 | :--- | :--- | :--- | :--- |
 | **`product-architect`** | Lead Product & System Architect | Wawancara kebutuhan sistem (opsi A/B/C/D), menyusun PRD standar Silicon Valley, diagram Mermaid, kriteria Gherkin. | Planning tools, System design, Spec generation |
+| **`security-engineer`** | Application Security (AppSec) Engineer | Audit celah keamanan OWASP MASVS, scan kebocoran API key/secret, secure storage, proteksi BOLA/IDOR. | Security audit, Secret scanning, Static analysis |
+| **`test-engineer`** | Senior QA Automation & Test Harness Architect | Membangun test harness terisolasi, TDD (Red-Green-Refactor), mocktail/mockito, uji edge-case (401, 500, timeout). | Flutter test, Mocktail, Unit/Integration tests, TDD |
 | **`researcher`** | Codebase & Web Researcher | Menjelajahi codebase secara non-destruktif, membaca dokumentasi, mencari referensi web. | Read-only tools, Web search, File inspection |
 | **`browser-automation`** | Headless Chrome DevTools Driver | Menavigasi web live, testing UI, isi formulir, screenshot, verifikasi visual. | Chrome DevTools, Page clicks, Form inputs |
 | **`image-generator`** | Visual Asset & Media Designer | Membuat aset visual, mockup, diagram, ilustrasi untuk UI/UX. | Image generator model, media render |

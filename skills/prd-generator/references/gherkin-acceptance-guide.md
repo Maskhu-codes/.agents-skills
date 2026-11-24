@@ -36,3 +36,4 @@ Kriteria penerimaan (*Acceptance Criteria*) adalah penentu apakah sebuah fitur s
   - **Then:** Sistem mengembalikan respon HTTP 400 Bad Request.
   - **And:** Antarmuka menampilkan pesan: 'Token reset sudah kedaluwarsa. Silakan ulangi proses lupa kata sandi.'
 ```
+
